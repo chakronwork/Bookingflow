@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4f7f6;
+  --foreground: #193332;
+  --surface: #ffffff;
+  --line: #d7e1df;
+  --muted: #5d716f;
+  --accent: #147d78;
+  --accent-strong: #0d625e;
+  --accent-soft: #e4f3f1;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Tahoma, "Leelawadee UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button, input, select {
+  min-height: 44px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid #8ccbc5;
+  outline-offset: 2px;
+}
+
+.kiosk-panel {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: 0 2px 8px rgb(25 51 50 / 5%);
+}
+
+.kiosk-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.kiosk-primary:hover {
+  background: var(--accent-strong);
+}
+
+.kiosk-field {
+  border: 1px solid #b9cbc8;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--foreground);
+}
+
+.kiosk-field::placeholder {
+  color: #78908c;
+}
